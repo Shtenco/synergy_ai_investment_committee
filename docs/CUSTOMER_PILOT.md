@@ -1,0 +1,3 @@
+# Customer pilot — SYNERGY AI Investment Committee
+
+Objective: validate auditable committee decision support without delegating uncontrolled execution authority. Freeze scenario set and success criteria; integrate identity/audit; compare committee + Capital Guardian behavior against customer review; run adversarial/extreme cases; define change control for prompts/models. Pilot success does not imply alpha or autonomous-trading suitability.
