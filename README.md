@@ -2,6 +2,8 @@
 
 > **Auditable multi-agent investment decision support with deterministic Capital Guardian boundary**
 
+Version: `2.0.0`
+
 **Enterprise v2.0.0** · FastAPI/OpenAPI · Docker/Compose · RBAC/JWT · PostgreSQL/ClickHouse audit
 
 **Designed for:** Quant funds, asset managers, research teams and AI-native investment desks  
