@@ -1,53 +1,24 @@
 # SYNERGY AI Investment Committee
 
-**Auditable multi-agent decision support with deterministic Capital Guardian**
+> **Auditable multi-agent investment decision support with deterministic Capital Guardian boundary**
 
-Version: `2.0.0` · Python 3.11+ · REST API · Docker · CI · automated tests
+**Enterprise v2.0.0** · FastAPI/OpenAPI · Docker/Compose · RBAC/JWT · PostgreSQL/ClickHouse audit
 
-## Why this exists
-Human and AI research signals need an auditable decision process with an external deterministic risk veto.
+**Designed for:** Quant funds, asset managers, research teams and AI-native investment desks  
+**Primary endpoint:** `POST /enterprise/v1/committee/deliberate`
 
-## Commercial buyer
-Funds exploring agentic research, investment committees and AI-assisted discretionary/quant workflows.
+> [!IMPORTANT]
+> Decision-support infrastructure only. AI deliberation is not autonomous execution authority; deterministic risk/Capital Guardian controls remain separate.
 
-## Core guarantee
-The software guarantees deterministic interface behavior covered by tests. **It does not guarantee trading profit.** Live-market deployment requires customer-specific OOS validation, fees/spread/slippage/latency/capacity modelling, security review and legal/compliance approval.
+## Verification
+**20 tests passed** · health smoke **80/80 200** · local p95 **79.3 ms** (~549 req/s). Health smoke only.
 
 ## Quick start
 ```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -e '.[dev]'
+pip install -e '.[dev,enterprise]'
 pytest -q
 python -m synergy_ai_committee.api
 ```
 
-Then open `http://localhost:8000/docs`.
-
-## Commercial package
-- standalone installable Python package;
-- versioned FastAPI boundary;
-- deterministic reference core;
-- Dockerfile and GitHub Actions CI;
-- sales one-pager, security boundary, deployment notes and provenance;
-- proprietary evaluation licence ready for a paid pilot.
-
-## Research lineage
-Shtenco/synergy_agi_trader + MQL5 multi-agent / AI hedge-fund / memory / evolutionary-agent research
-
-See `docs/PRODUCT_STATUS.md`, `docs/SALES_ONE_PAGER.md`, `docs/SECURITY.md` and `docs/PROVENANCE.md`.
-
-## Enterprise v2.0.0
-
-The repository now includes a separate enterprise boundary around the product core:
-
-- JWT/RBAC roles (`viewer`, `researcher`, `trader`, `risk`, `operator`, `admin`);
-- request-id propagation and auditable product actions;
-- PostgreSQL and ClickHouse audit stores;
-- Bybit V5, CCXT multi-CEX and MetaTrader 5 adapters with live execution disabled by default;
-- retry/circuit breaker controls;
-- health and Prometheus-compatible metrics;
-- Docker Compose deployment reference;
-- deterministic synthetic customer dataset and HTTP/k6 load harnesses.
-
-See `docs/ENTERPRISE_ARCHITECTURE.md`, `docs/ENTERPRISE_DEPLOYMENT.md` and `docs/CUSTOMER_ACCEPTANCE.md` before any customer deployment.
+## CTO package
+[Due diligence](docs/CTO_DUE_DILIGENCE.md) · [Architecture](docs/ARCHITECTURE_DIAGRAMS.md) · [API](docs/API_EXAMPLES.md) · [Security](SECURITY.md) · [Benchmarks](docs/BENCHMARKS_AND_ACCEPTANCE.md) · [SLA/SLO](docs/SLA_SLO.md) · [Deployment](docs/DEPLOYMENT_CHECKLIST.md) · [Pilot](docs/CUSTOMER_PILOT.md)
