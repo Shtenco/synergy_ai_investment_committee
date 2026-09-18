@@ -1,0 +1,3 @@
+# Security policy — SYNERGY AI Investment Committee
+
+No production secrets in Git. Prefer customer OIDC/mTLS/JWKS, KMS-backed secrets and least-privilege credentials. AI-style deliberation must never become execution authority by itself; deterministic Capital Guardian/risk controls remain outside mutable agent reasoning. PostgreSQL is authoritative audit; ClickHouse is analytical mirror. No security/regulatory certification is claimed.
