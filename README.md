@@ -59,3 +59,69 @@ flowchart LR
 `GREEN` означает только воспроизводимо подтверждённый тезис. Гипотеза, benchmark без корректного протокола, архитектурная диаграмма или красивый экономический цикл сами по себе GREEN не дают.
 
 <!-- SYNERGY-FEDERATION-PASSPORT:END -->
+---
+
+# 🏛️ Глубокая техническая спецификация AI Investment Committee
+
+## 🎯 Проблема
+
+Несколько AI-агентов могут создавать видимость консенсуса, не добавляя независимой информации. Комитет нужен как audit-friendly decision-support, а не как автономный распорядитель капитала.
+
+## 🏗️ Pipeline
+
+```mermaid
+flowchart LR
+    N0[Research artifacts] --> N1[Independent agent views] --> N2[Evidence normalization] --> N3[Conflict/debate layer] --> N4[Deterministic Capital Guardian] --> N5[Committee recommendation] --> N6[Human/policy authorization]
+```
+
+## 📥 Входы
+
+- research reports;
+- model outputs;
+- risk reports;
+- portfolio constraints;
+- provenance/evidence;
+
+## 📤 Выходы
+
+- structured recommendation;
+- dissent/conflict record;
+- confidence with evidence refs;
+- required conditions;
+- NO_ACTION;
+
+## 🛡️ Непереговорные инварианты
+
+```text
+agent vote count != evidence strength
+committee cannot bypass Capital Guardian
+missing evidence must remain UNKNOWN
+human/policy authorization separate from deliberation
+all recommendations bind source artifacts
+```
+
+## 🧪 Как ловить ложный GREEN
+
+- отделять API/health benchmark от качества торгового решения;
+- проверять stale-state и timestamp binding;
+- иметь negative/adversarial tests;
+- не считать unit-test coverage доказательством инвестиционной ценности;
+- сохранять request → decision → downstream evidence chain;
+- явно указывать, что измерено локально, а что требует customer/live validation.
+
+## 🔗 Контракт с соседями
+
+- [`synergy_agi_nexus`](https://github.com/Shtenco/synergy_agi_nexus)
+- [`synergy_midas_ai`](https://github.com/Shtenco/synergy_midas_ai)
+- [`synergy_riskguard`](https://github.com/Shtenco/synergy_riskguard)
+- [`synergy_financial_os`](https://github.com/Shtenco/synergy_financial_os)
+
+## 🚀 Следующий доказательный рубеж
+
+1. frozen acceptance dataset;
+2. adversarial fixtures;
+3. cross-module typed contract;
+4. end-to-end trace id;
+5. OOS/shadow evidence where market quality is claimed;
+6. explicit failure-mode table;
+7. reproducible evidence bundle referenced from README.
