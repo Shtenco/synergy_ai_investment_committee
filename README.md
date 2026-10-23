@@ -1,9 +1,9 @@
-# 🏛️ SYNERGY AI Investment Committee — verified technical dossier
+#  SYNERGY AI Investment Committee — verified technical dossier
 
-> **Статус:** 🟡 CANDIDATE — core deliberation, typed federation contract, FastAPI enterprise surface and tests are present in `main`; production deployment is not inferred from source presence.
+> **Статус:**  CANDIDATE — core deliberation, typed federation contract, FastAPI enterprise surface and tests are present in `main`; production deployment is not inferred from source presence.
 > **Проверено по фактическому tree/source/tests:** 29.09.2026.
 
-## 1. 🎯 Задача
+## 1.  Задача
 
 Этот repository реализует bounded investment-committee layer: несколько простых экспертных ролей формируют investment thesis, при этом output остаётся **advisory evidence**, а не автоматическим разрешением на сделку.
 
@@ -15,7 +15,7 @@ model/agent vote  != capital authority
 API response      != executed trade
 ```
 
-## 2. 📦 Фактический состав
+## 2.  Фактический состав
 
 В `main` присутствуют:
 
@@ -31,7 +31,7 @@ API response      != executed trade
 
 Это уже не documentation shell.
 
-## 3. 🧠 Core model
+## 3.  Core model
 
 `core.py` определяет:
 
@@ -83,7 +83,7 @@ capital_guardian = VETO_VOLATILITY
 action = NO_TRADE
 ```
 
-## 4. 🏗️ Архитектура
+## 4.  Архитектура
 
 ```mermaid
 flowchart LR
@@ -100,7 +100,7 @@ flowchart LR
     T -. advisory only .-> EXEC[Execution authority]
 ```
 
-## 5. 🔗 Federation contract
+## 5.  Federation contract
 
 `synergy_contracts.py` объявляет:
 
@@ -120,7 +120,7 @@ Payload builder `investment_thesis_payload(...)`:
 
 Это важная fail-safe граница.
 
-## 6. 📥 Inputs
+## 6.  Inputs
 
 Фактический typed input:
 
@@ -132,7 +132,7 @@ Payload builder `investment_thesis_payload(...)`:
 - liquidity;
 - risk-veto threshold.
 
-## 7. 📤 Outputs
+## 7.  Outputs
 
 Thesis содержит:
 
@@ -145,7 +145,7 @@ Thesis содержит:
 - explicit `authorization=false`;
 - domain-validation requirement.
 
-## 8. 🛡️ Authority / invariants
+## 8.  Authority / invariants
 
 ```text
 investment thesis != broker order
@@ -157,7 +157,7 @@ audit log          != market truth
 
 Downstream system обязан отдельно проверять portfolio, risk, execution and policy constraints.
 
-## 9. 🧪 Реальные tests
+## 9.  Реальные tests
 
 В `tests/` присутствуют отдельные suites для:
 
@@ -182,7 +182,7 @@ Downstream system обязан отдельно проверять portfolio, ri
 
 README не подменяет наличие tests observed-green run.
 
-## 10. 🔐 Enterprise boundary
+## 10.  Enterprise boundary
 
 Тесты используют signed role tokens и tenant/request identity. Это показывает наличие:
 
@@ -200,7 +200,7 @@ README не подменяет наличие tests observed-green run.
 - tamper evidence;
 - rate limiting.
 
-## 11. ⚠️ Failure modes
+## 11.  Failure modes
 
 | Failure | Gate |
 |---|---|
@@ -212,7 +212,7 @@ README не подменяет наличие tests observed-green run.
 | manipulated momentum/liquidity | input provenance still required |
 | audit storage loss | production evidence gap |
 
-## 12. 🛠️ Воспроизводимость
+## 12.  Воспроизводимость
 
 Ожидаемый local path:
 
@@ -225,7 +225,7 @@ pytest -q
 
 Container/deploy manifests также присутствуют, но production deployment не объявляется без observed evidence.
 
-## 13. 🗺️ Карта repository
+## 13.  Карта repository
 
 | Path | Role |
 |---|---|
@@ -239,7 +239,7 @@ Container/deploy manifests также присутствуют, но production 
 | `loadtests/` | load-test assets |
 | `SECURITY.md` | security notes |
 
-## 14. 🔗 Место в SYNERGY
+## 14.  Место в SYNERGY
 
 ```text
 market observations / specialist signals
@@ -251,21 +251,21 @@ market observations / specialist signals
 
 Основной consumer: [`synergy_midas_ai`](https://github.com/Shtenco/synergy_midas_ai).
 
-## 15. 📊 Evidence maturity
+## 15.  Evidence maturity
 
 | Layer | Status |
 |---|---|
-| core deliberation code | ✅ |
-| volatility veto | ✅ |
-| federation payload | ✅ |
-| enterprise API source | ✅ |
-| auth/audit tests | ✅ source |
-| Docker/deploy scaffold | ✅ |
-| observed cross-repo E2E | ❌ not promoted |
-| live trading authorization | intentionally ❌ |
+| core deliberation code |  |
+| volatility veto |  |
+| federation payload |  |
+| enterprise API source |  |
+| auth/audit tests |  source |
+| Docker/deploy scaffold |  |
+| observed cross-repo E2E |  not promoted |
+| live trading authorization | intentionally  |
 | production deployment | not inferred |
 
-## 16. 🚀 Roadmap
+## 16.  Roadmap
 
 1. bind observation provenance/hash;
 2. calibrate scores on strict OOS;
@@ -275,7 +275,7 @@ market observations / specialist signals
 6. connect to portfolio/risk authority without granting committee execution power;
 7. produce observed M4/M5 federation evidence.
 
-## 17. 🛑 Что проект НЕ утверждает
+## 17.  Что проект НЕ утверждает
 
 - что три heuristic agents дают alpha;
 - что BUY/SELL является приказом брокеру;
@@ -285,4 +285,4 @@ market observations / specialist signals
 
 ---
 
-[🧭 SYNERGY SYSTEM](https://github.com/Shtenco/synergy_system) · [📚 Atlas](https://github.com/Shtenco/synergy_system/blob/main/docs/SYNERGY_REPOSITORY_ATLAS.md)
+[ SYNERGY SYSTEM](https://github.com/Shtenco/synergy_system) · [ Atlas](https://github.com/Shtenco/synergy_system/blob/main/docs/SYNERGY_REPOSITORY_ATLAS.md)
