@@ -1,3 +1,9 @@
+<!-- SCIENTIFIC-V4-2026:START -->
+<img src="assets/readme/scientific-architecture-v4.svg" width="100%" alt="INVESTMENT COMMITTEE / MULTI-AGENT THESIS"/>
+
+[Научно-техническое досье V4](docs/SCIENTIFIC_DOSSIER_V4_2026.md) — математическая модель, архитектура, эксперименты. Исходный README ниже сохранён полностью.
+<!-- SCIENTIFIC-V4-2026:END -->
+
 #  SYNERGY AI Investment Committee — verified technical dossier
 
 > **Статус:**  CANDIDATE — core deliberation, typed federation contract, FastAPI enterprise surface and tests are present in `main`; production deployment is not inferred from source presence.
